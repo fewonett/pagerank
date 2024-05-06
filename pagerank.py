@@ -4,7 +4,7 @@ import re
 import sys
 
 DAMPING = 0.85
-SAMPLES = 10000
+SAMPLES = 100000
 
 
 def main():
@@ -98,7 +98,6 @@ def sample_pagerank(corpus, damping_factor, n):
     page = random.sample(list(unique_values),1)[0]    
     # Now loop
     for i in range(1, n +1):
-        print(i)
         # Get probability distribution of choice
         dist = transition_model(corpus, page, damping_factor)
         # Update probability in return dict:
